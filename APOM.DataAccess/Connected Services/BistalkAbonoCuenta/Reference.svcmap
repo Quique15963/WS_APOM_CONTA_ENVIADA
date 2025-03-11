@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="52e90f74-a122-40eb-b7a9-774a4f792b53" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://devscn00/BCPAbonosService/BCPAbonosService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BCPAbonosService.disco" MetadataType="Disco" ID="6aaa2bc1-b6e7-4b1e-a850-f6364619ed91" SourceId="1" SourceUrl="http://devscn00.bancred.com.bo/BCPAbonosService/BCPAbonosService.svc?disco" />
+    <MetadataFile FileName="BizTalkServiceInstance1.wsdl" MetadataType="Wsdl" ID="531390e8-33e6-4b57-8a9e-00ef69daca76" SourceId="1" SourceUrl="http://devscn00.bancred.com.bo/BCPAbonosService/BCPAbonosService.svc?wsdl" />
+    <MetadataFile FileName="BCPAbonosService.xsd" MetadataType="Schema" ID="23492b1b-0f77-4fd9-84f8-03f8904b5f2c" SourceId="1" SourceUrl="http://devscn00.bancred.com.bo/BCPAbonosService/BCPAbonosService.svc?xsd=xsd2" />
+    <MetadataFile FileName="BCPAbonosService1.xsd" MetadataType="Schema" ID="23a22e81-cd4e-4ff1-abae-7962655c13a5" SourceId="1" SourceUrl="http://devscn00.bancred.com.bo/BCPAbonosService/BCPAbonosService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

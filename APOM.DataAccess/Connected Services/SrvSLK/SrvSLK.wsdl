@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SrvSLK" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_ISrvSLK_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://btbspe00.bancred.com.bo/WCFServiceSLKSecure/SrvSLK.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://btbspe00.bancred.com.bo/WCFServiceSLKSecure/SrvSLK.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://btbspe00.bancred.com.bo/WCFServiceSLKSecure/SrvSLK.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFServiceSLK" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISrvSLK_ConsultaTC_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaTC" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ConsultaTC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaTCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ConsultaTarjetaCredito_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaTarjetaCredito" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ConsultaTarjetaCredito_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaTarjetaCreditoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ConsultaTarjeta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaTarjeta" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ConsultaTarjeta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaTarjetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ConsultaCuenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaCuenta" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ConsultaCuenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ConsultaTarjetaCuenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaTarjetaCuenta" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ConsultaTarjetaCuenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaTarjetaCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_obtenerEmpresas_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerEmpresas" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_obtenerEmpresas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerEmpresasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_obtenerServicios_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerServicios" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_obtenerServicios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerServiciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_obtenerEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_obtenerEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_obtenerServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerServicio" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_obtenerServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_obtenerPago_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerPago" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_obtenerPago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ConsultaTarjetaCuentaFull_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaTarjetaCuentaFull" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ConsultaTarjetaCuentaFull_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaTarjetaCuentaFullResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ConsultaTarjetaCuentaRelacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaTarjetaCuentaRelacion" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ConsultaTarjetaCuentaRelacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaTarjetaCuentaRelacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_NuevaCuenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:NuevaCuenta" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_NuevaCuenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NuevaCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_AsociaTarjetaCuentas_InputMessage">
+    <wsdl:part name="parameters" element="tns:AsociaTarjetaCuentas" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_AsociaTarjetaCuentas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AsociaTarjetaCuentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_DesafiliacionTarjetaCuenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:DesafiliacionTarjetaCuenta" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_DesafiliacionTarjetaCuenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DesafiliacionTarjetaCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ActivarBloquearTarjeta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActivarBloquearTarjeta" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ActivarBloquearTarjeta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActivarBloquearTarjetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ZDecryptValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:ZDecryptValue" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ZDecryptValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ZDecryptValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ZEncryptValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:ZEncryptValue" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_ZEncryptValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ZEncryptValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_SendReceiveSecurity_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendReceiveSecurity" />
+  </wsdl:message>
+  <wsdl:message name="ISrvSLK_SendReceiveSecurity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendReceiveSecurityResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISrvSLK">
+    <wsdl:operation name="ConsultaTC">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/ConsultaTC" message="tns:ISrvSLK_ConsultaTC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/ConsultaTCResponse" message="tns:ISrvSLK_ConsultaTC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTarjetaCredito">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/ConsultaTarjetaCredito" message="tns:ISrvSLK_ConsultaTarjetaCredito_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/ConsultaTarjetaCreditoResponse" message="tns:ISrvSLK_ConsultaTarjetaCredito_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTarjeta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/ConsultaTarjeta" message="tns:ISrvSLK_ConsultaTarjeta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/ConsultaTarjetaResponse" message="tns:ISrvSLK_ConsultaTarjeta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaCuenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/ConsultaCuenta" message="tns:ISrvSLK_ConsultaCuenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/ConsultaCuentaResponse" message="tns:ISrvSLK_ConsultaCuenta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTarjetaCuenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/ConsultaTarjetaCuenta" message="tns:ISrvSLK_ConsultaTarjetaCuenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/ConsultaTarjetaCuentaResponse" message="tns:ISrvSLK_ConsultaTarjetaCuenta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerEmpresas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/obtenerEmpresas" message="tns:ISrvSLK_obtenerEmpresas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/obtenerEmpresasResponse" message="tns:ISrvSLK_obtenerEmpresas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerServicios">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/obtenerServicios" message="tns:ISrvSLK_obtenerServicios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/obtenerServiciosResponse" message="tns:ISrvSLK_obtenerServicios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerEmpresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/obtenerEmpresa" message="tns:ISrvSLK_obtenerEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/obtenerEmpresaResponse" message="tns:ISrvSLK_obtenerEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerServicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/obtenerServicio" message="tns:ISrvSLK_obtenerServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/obtenerServicioResponse" message="tns:ISrvSLK_obtenerServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerPago">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/obtenerPago" message="tns:ISrvSLK_obtenerPago_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/obtenerPagoResponse" message="tns:ISrvSLK_obtenerPago_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTarjetaCuentaFull">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/ConsultaTarjetaCuentaFull" message="tns:ISrvSLK_ConsultaTarjetaCuentaFull_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/ConsultaTarjetaCuentaFullResponse" message="tns:ISrvSLK_ConsultaTarjetaCuentaFull_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTarjetaCuentaRelacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/ConsultaTarjetaCuentaRelacion" message="tns:ISrvSLK_ConsultaTarjetaCuentaRelacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/ConsultaTarjetaCuentaRelacionResponse" message="tns:ISrvSLK_ConsultaTarjetaCuentaRelacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NuevaCuenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/NuevaCuenta" message="tns:ISrvSLK_NuevaCuenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/NuevaCuentaResponse" message="tns:ISrvSLK_NuevaCuenta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsociaTarjetaCuentas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/AsociaTarjetaCuentas" message="tns:ISrvSLK_AsociaTarjetaCuentas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/AsociaTarjetaCuentasResponse" message="tns:ISrvSLK_AsociaTarjetaCuentas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DesafiliacionTarjetaCuenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/DesafiliacionTarjetaCuenta" message="tns:ISrvSLK_DesafiliacionTarjetaCuenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/DesafiliacionTarjetaCuentaResponse" message="tns:ISrvSLK_DesafiliacionTarjetaCuenta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivarBloquearTarjeta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/ActivarBloquearTarjeta" message="tns:ISrvSLK_ActivarBloquearTarjeta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/ActivarBloquearTarjetaResponse" message="tns:ISrvSLK_ActivarBloquearTarjeta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ZDecryptValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/ZDecryptValue" message="tns:ISrvSLK_ZDecryptValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/ZDecryptValueResponse" message="tns:ISrvSLK_ZDecryptValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ZEncryptValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/ZEncryptValue" message="tns:ISrvSLK_ZEncryptValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/ZEncryptValueResponse" message="tns:ISrvSLK_ZEncryptValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendReceiveSecurity">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvSLK/SendReceiveSecurity" message="tns:ISrvSLK_SendReceiveSecurity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvSLK/SendReceiveSecurityResponse" message="tns:ISrvSLK_SendReceiveSecurity_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_ISrvSLK" type="tns:ISrvSLK">
+    <wsp:PolicyReference URI="#WSHttpBinding_ISrvSLK_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultaTC">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/ConsultaTC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTarjetaCredito">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/ConsultaTarjetaCredito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTarjeta">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/ConsultaTarjeta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaCuenta">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/ConsultaCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTarjetaCuenta">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/ConsultaTarjetaCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerEmpresas">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/obtenerEmpresas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerServicios">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/obtenerServicios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerEmpresa">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/obtenerEmpresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerServicio">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/obtenerServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerPago">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/obtenerPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTarjetaCuentaFull">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/ConsultaTarjetaCuentaFull" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTarjetaCuentaRelacion">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/ConsultaTarjetaCuentaRelacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NuevaCuenta">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/NuevaCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsociaTarjetaCuentas">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/AsociaTarjetaCuentas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DesafiliacionTarjetaCuenta">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/DesafiliacionTarjetaCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivarBloquearTarjeta">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/ActivarBloquearTarjeta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZDecryptValue">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/ZDecryptValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZEncryptValue">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/ZEncryptValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendReceiveSecurity">
+      <soap12:operation soapAction="http://tempuri.org/ISrvSLK/SendReceiveSecurity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SrvSLK">
+    <wsdl:port name="WSHttpBinding_ISrvSLK" binding="tns:WSHttpBinding_ISrvSLK">
+      <soap12:address location="https://btbspe00.bancred.com.bo/WCFServiceSLKSecure/SrvSLK.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://btbspe00.bancred.com.bo/WCFServiceSLKSecure/SrvSLK.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://btbspe00.bancred.com.bo/WCFServiceSLKSecure/SrvSLK.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFServiceSLK" />
+  <xs:element name="ConsultaTC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="TipoCambio_PARAMETROS" nillable="true" type="q1:TipoCambio_PARAMETROS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaTCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="ConsultaTCResult" nillable="true" type="q2:TipoCambio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaTarjetaCredito">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="TARJETA_CUENTA_PARAMETROS" nillable="true" type="q3:TARJETA_CUENTA_PARAMETROS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaTarjetaCreditoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="ConsultaTarjetaCreditoResult" nillable="true" type="q4:ArrayOfTARJETA_CREDITO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaTarjeta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="TARJETA_CUENTA_PARAMETROS" nillable="true" type="q5:TARJETA_CUENTA_PARAMETROS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaTarjetaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="ConsultaTarjetaResult" nillable="true" type="q6:ArrayOfTARJETA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaCuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="TARJETA_CUENTA_PARAMETROS" nillable="true" type="q7:TARJETA_CUENTA_PARAMETROS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="ConsultaCuentaResult" nillable="true" type="q8:ArrayOfCUENTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaTarjetaCuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="TARJETA_CUENTA_PARAMETROS" nillable="true" type="q9:TARJETA_CUENTA_PARAMETROS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaTarjetaCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="ConsultaTarjetaCuentaResult" nillable="true" type="q10:ArrayOfTARJETA_CUENTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerEmpresas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerEmpresasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="obtenerEmpresasResult" nillable="true" type="q11:ArrayOfEMPRESAS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerServicios">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerServiciosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="obtenerServiciosResult" nillable="true" type="q12:ArrayOfEMPRESASERVICIOS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerEmpresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="EMPRESA_SERVICIOS_PARAMETROS" nillable="true" type="q13:EMPRESA_SERVICIOS_PARAMETROS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="obtenerEmpresaResult" nillable="true" type="q14:ArrayOfEMPRESAS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerServicio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="EMPRESA_SERVICIOS_PARAMETROS" nillable="true" type="q15:EMPRESA_SERVICIOS_PARAMETROS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerServicioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="obtenerServicioResult" nillable="true" type="q16:ArrayOfEMPRESASERVICIOS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="PAGOS_PARAMETROS" nillable="true" type="q17:PAGOS_PARAMETROS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerPagoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="obtenerPagoResult" nillable="true" type="q18:ArrayOfPAGOS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaTarjetaCuentaFull">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="TARJETA_CUENTA_PARAMETROS_FULL" nillable="true" type="q19:TARJETA_CUENTA_PARAMETROS_FULL" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaTarjetaCuentaFullResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="ConsultaTarjetaCuentaFullResult" nillable="true" type="q20:ArrayOfTARJETA_CUENTA_FULL" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaTarjetaCuentaRelacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="TARJETA_CUENTA_RELACION_PARAMETROS" nillable="true" type="q21:TARJETA_CUENTA_RELACION_PARAMETROS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaTarjetaCuentaRelacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="ConsultaTarjetaCuentaRelacionResult" nillable="true" type="q22:ArrayOfTARJETA_CUENTA_RELACION" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NuevaCuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="CUENTA" nillable="true" type="q23:CUENTA" />
+        <xs:element minOccurs="0" name="PAN" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NuevaCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NuevaCuentaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsociaTarjetaCuentas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="NUEVA_TARJETA_CUENTA" nillable="true" type="q24:NUEVA_TARJETA_CUENTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsociaTarjetaCuentasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AsociaTarjetaCuentasResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DesafiliacionTarjetaCuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="DESAFILIACION_TARJETA_CUENTA" nillable="true" type="q25:DESAFILIACION_TARJETA_CUENTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DesafiliacionTarjetaCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DesafiliacionTarjetaCuentaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActivarBloquearTarjeta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="TARJETA_ESTADO_PARAMETROS" nillable="true" type="q26:TARJETA_ESTADO_PARAMETROS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActivarBloquearTarjetaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/WCFServiceSLK" minOccurs="0" name="ActivarBloquearTarjetaResult" nillable="true" type="q27:TARJETA_ESTADO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ZDecryptValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ZDecryptValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ZDecryptValueResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ZEncryptValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ZEncryptValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ZEncryptValueResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendReceiveSecurity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sInput" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="zuAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="zuClavel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sOutput" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sError" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendReceiveSecurityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendReceiveSecurityResult" type="xs:int" />
+        <xs:element minOccurs="0" name="sOutput" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sError" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E217AFF2-FB92-4934-8300-F486CEC655B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APOM.DataAccess</RootNamespace>
+    <AssemblyName>APOM.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog">
+      <HintPath>..\DLL\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\SrvSLK\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccesRepext.cs" />
+    <Compile Include="DataAccesSmart.cs" />
+    <Compile Include="DataAccesApom.cs" />
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="Diarios_Interfaz.cs">
+      <DependentUpon>Diarios_Interfaz.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Diarios_Interfaz.designer.cs">
+      <DependentUpon>Diarios_Interfaz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diarios_Interfaz1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Diarios_Interfaz.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\APOM.Common\APOM.Common.csproj">
+      <Project>{e8edb5ba-e133-4b69-8718-262b39c59184}</Project>
+      <Name>APOM.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APOM.Entities\APOM.Entities.csproj">
+      <Project>{8A1C2784-BCE3-433B-82E8-573EBFF83515}</Project>
+      <Name>APOM.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APOM.Log\APOM.Log.csproj">
+      <Project>{F3DFB9CD-1885-4427-A23D-4D3DA13DBF73}</Project>
+      <Name>APOM.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APOM.Security\APOM.Security.csproj">
+      <Project>{19E51CEE-E666-4939-A9D0-2FD610C9BBBB}</Project>
+      <Name>APOM.Security</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SrvSLK\APOM.DataAccess.SrvSLK.CUENTA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SrvSLK\APOM.DataAccess.SrvSLK.EMPRESAS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SrvSLK\APOM.DataAccess.SrvSLK.EMPRESASERVICIOS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SrvSLK\APOM.DataAccess.SrvSLK.PAGOS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SrvSLK\APOM.DataAccess.SrvSLK.TARJETA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SrvSLK\APOM.DataAccess.SrvSLK.TARJETA_CREDITO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SrvSLK\APOM.DataAccess.SrvSLK.TARJETA_CUENTA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SrvSLK\APOM.DataAccess.SrvSLK.TARJETA_CUENTA_FULL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SrvSLK\APOM.DataAccess.SrvSLK.TARJETA_CUENTA_RELACION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SrvSLK\APOM.DataAccess.SrvSLK.TARJETA_ESTADO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SrvSLK\APOM.DataAccess.SrvSLK.TipoCambio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SrvSLK\SrvSLK.wsdl" />
+    <None Include="Connected Services\SrvSLK\SrvSLK.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SrvSLK\SrvSLK1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SrvSLK\SrvSLK2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Diarios_Interfaz.xsc">
+      <DependentUpon>Diarios_Interfaz.xsd</DependentUpon>
+    </None>
+    <None Include="Diarios_Interfaz.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Diarios_Interfaz1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Diarios_Interfaz.xss">
+      <DependentUpon>Diarios_Interfaz.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\SrvSLK\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SrvSLK\SrvSLK.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SrvSLK\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SrvSLK\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SrvSLK\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

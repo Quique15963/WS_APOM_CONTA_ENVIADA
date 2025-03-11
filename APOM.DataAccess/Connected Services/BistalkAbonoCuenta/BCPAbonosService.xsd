@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://BCP.Biztalk.AbonoCuentaCorriente.Schemas.MensajeSalida" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://BCP.Biztalk.AbonoCuentaCorriente.Schemas.MensajeSalida" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo>
+      <b:schemaInfo document_type="Response" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="StatusTrans" type="xs:string" />
+        <xs:element name="NumeroSecTrans" type="xs:string" />
+        <xs:element name="MsjRetornoLongVariable" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

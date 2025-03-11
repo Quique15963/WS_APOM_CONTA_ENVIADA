@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://BCP.Biztalk.AbonoCuentaCorriente.Schemas.ServiceContract" xmlns:ns1="https://BCP.Biztalk.AbonoCtaCorriente.Schemas.PropertySchema" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:ns0="http://BCP.Biztalk.AbonoCuentaCorriente.Schemas.MensajeSalida" targetNamespace="http://BCP.Biztalk.AbonoCuentaCorriente.Schemas.ServiceContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://devscn00.bancred.com.bo:80/BCPAbonosService/BCPAbonosService.svc?xsd=xsd2" namespace="http://BCP.Biztalk.AbonoCuentaCorriente.Schemas.MensajeSalida" />
+  <xs:annotation>
+    <xs:appinfo>
+      <b:references xmlns:b="http://schemas.microsoft.com/BizTalk/2003">
+        <b:reference targetNamespace="http://BCP.Biztalk.AbonoCuentaCorriente.Schemas.MensajeSalida" />
+      </b:references>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Request">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="NombreCanal" type="xs:string" />
+        <xs:element name="Password" type="xs:string" />
+        <xs:element name="NroCuenta" type="xs:string" />
+        <xs:element name="TipoDeCuenta" type="xs:string" />
+        <xs:element name="Moneda" type="xs:string" />
+        <xs:element name="Monto" type="xs:string" />
+        <xs:element name="Glosa" type="xs:string" />
+        <xs:element name="TipodeCambioCompra" type="xs:string" />
+        <xs:element name="TipodeCambioVenta" type="xs:string" />
+        <xs:element name="FechaSolicitudCanal" type="xs:string" />
+        <xs:element name="HoraSolicitudCanal" type="xs:string" />
+        <xs:element name="NroReferenciaCanal" type="xs:string" />
+        <xs:element minOccurs="0" name="NroOperacionOriginal" type="xs:string" />
+        <xs:element name="Teti" type="xs:string" />
+        <xs:element name="User" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Response">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CodRspta" type="xs:string" />
+        <xs:element name="MsjRetorno" type="xs:string" />
+        <xs:element name="NroOperacionHost" type="xs:string" />
+        <xs:element name="Teti" type="xs:string" />
+        <xs:element name="User" type="xs:string" />
+        <xs:element name="TraceBiztalk" type="xs:string" />
+        <xs:element name="SaldoContable" type="xs:string" />
+        <xs:element name="SaldoDisponible" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
